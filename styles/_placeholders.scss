@@ -1,10 +1,19 @@
-@use 'variables' as *;
+@use "variables" as *;
 
 %hover-black {
     &:hover {
         cursor: pointer;
         color: $color_black;
         fill: $color_black;
+        transition: 0.3s;
+    }
+}
+
+%hover-light {
+    &:hover {
+        cursor: pointer;
+        color: $color_wight;
+        fill: $color_wight;
         transition: 0.3s;
     }
 }

@@ -8,6 +8,28 @@
     row-gap: $row-gap;
 }
 
+@mixin position(
+    $type: relative,
+    $zIndex: 1,
+    $inset: -1,
+    $top-or-bottom: top,
+    $left-or-right: left,
+    $val1: 0,
+    $val2: 0
+) {
+    position: $type;
+    z-index: $zIndex;
+
+
+    @if $inset > -1 {
+        inset: $inset;
+    }  
+    @else {
+        #{$top-or-bottom}: $val1;
+        #{$left-or-right}: $val2;
+    }
+}
+
 @mixin f-style($size, $weight, $color) {
     font-size: $size;
     font-weight: $weight;
