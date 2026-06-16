@@ -1,0 +1,130 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "sass:color";
+
+.work-section {
+    padding: 0 20px 180px;
+    // margin: 45px 0 88px;
+    
+    // ::after {
+    //     content: '';
+
+    // }
+
+    .work {
+        margin: 0 auto;
+        text-align: center;
+
+        &__title {
+            margin: 0 0 80px 0;
+            @include f-style(60px, 400, $color_wight);
+
+            @media (max-width: $media_min) {
+                display: none;
+            }
+        }
+
+        &__cards-wrapper {
+            margin: 0 auto;
+            max-width: 950px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            row-gap: 65px;
+            column-gap: 35px;
+
+            place-items: center;
+
+            grid-template-areas:
+                "analysis design development"
+                "maintenance testing integration";
+
+            .card--analysis {
+                grid-area: analysis;
+                justify-self: start;
+            }
+
+            .card--design {
+                grid-area: design;
+            }
+
+            .card--development {
+                grid-area: development;
+                justify-self: end;
+            }
+
+            .card--maintenance {
+                grid-area: maintenance;
+                justify-self: start;
+            }
+
+            .card--testing {
+                grid-area: testing;
+            }
+
+            .card--integration {
+                grid-area: integration;
+                justify-self: end;
+            }
+
+            .icon--analysis {
+                width: 29px;
+                height: 41px;
+            }
+
+            .icon--design {
+                width: 50px;
+                height: 41px;
+            }
+
+            .icon--development {
+                width: 55px;
+                height: 41px;
+            }
+
+            .icon--maintenance {
+                width: 43px;
+                height: 41px;
+            }
+
+            .icon--testing {
+                width: 44px;
+                height: 41px;
+            }
+
+            .icon--integration {
+                width: 42px;
+                height: 41px;
+            }
+
+            @media (max-width: $media_md) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-areas:
+                    "analysis design"
+                    "development maintenance"
+                    "testing integration";
+
+                justify-self: center;
+                row-gap: 35px;
+            }
+
+            @media (max-width: $media_min) {
+                .info-card {
+                    width: 140px;
+                    height: 170px;
+
+                    &__title {
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+
+                    &__desc {
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+}

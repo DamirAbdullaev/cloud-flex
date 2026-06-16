@@ -91,7 +91,7 @@
         margin: 170px auto 0;
         width: 680px;
         height: 60px;
-        background-color: color.adjust($color_wight, $alpha: -0.85);
+        background-color: $color_light-bg;
         border-radius: 20px;
 
         @include d-flex(end, center, nowrap, row, 10px);

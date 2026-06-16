@@ -1,12 +1,11 @@
 @use "../variables" as *;
 @use "../mixins" as *;
 @use "../placeholders";
-@use "sass:color";
 
 .header {
     width: 100%;
     height: 50px;
-    background-color: color.adjust($color_wight, $alpha: -0.85);
+    background-color: $color_light-bg;
     // background-color: $color_blue;
 
     border: {
