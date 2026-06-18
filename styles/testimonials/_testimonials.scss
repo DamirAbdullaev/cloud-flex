@@ -1,0 +1,139 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+%slider-btn {
+    width: 67px;
+    height: 67px;
+    border: none;
+    border-radius: 20px;
+    background-color: $color_light-bg;
+    rotate: z 45deg;
+    transition: 0.3s ease;
+}
+
+%slider-icon {
+    width: 36px;
+    height: 23px;
+    fill: $color_wight;
+    transition: 0.3s ease;
+}
+
+.testimonials {
+    padding: 100px 0;
+    margin: 0 auto;
+    @include d-flex(start, center, nowrap, column, 0, 90px);
+
+    &__title {
+        @include f-style(60px, 400, $color_wight);
+
+        @media (max-width: $media_md) {
+            font-size: 35px;
+        }
+    }
+
+    .slider {
+        position: relative;
+        height: 500px;
+
+        &__left-btn {
+            @extend %slider-btn;
+            @include position(absolute, 1, -1, top, left, 100px, -100px);
+
+            &-icon {
+                @extend %slider-icon;
+                rotate: z 135deg;
+            }
+        }
+
+        &__right-btn {
+            @extend %slider-btn;
+            @include position(absolute, 1, -1, top, right, 100px, -100px);
+
+            &-icon {
+                @extend %slider-icon;
+                rotate: z -45deg;
+            }
+        }
+
+        &__left-btn:hover,
+        &__right-btn:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            rotate: z 405deg;
+            box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.15);
+
+            .slider__left-btn-icon,
+            .slider__right-btn-icon {
+                fill: $color_black;
+                transform: rotate(-360deg);
+            }
+        }
+
+        &__points {
+            @include position(absolute, 1, -1, bottom, left, 0, 50%);
+            @include d-flex(start, center, nowrap, row, 9px, 0);
+
+            translate: -50% 0;
+
+            &-item {
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                background-color: $color_wight;
+
+                + .active {
+                    cursor: pointer;
+                    scale: 0.7;
+                    background-color: $color_gray;
+                }
+            }
+        }
+
+        @media (max-width: $media_md) {
+            height: 300px;
+
+            &__left-btn,
+            &__right-btn {
+                top: unset;
+                bottom: 20px;
+            }
+
+            &__left-btn {
+                left: 0;
+            }
+
+            &__right-btn {
+                right: 0;
+            }
+
+            &__points {
+                bottom: 45px;
+            }
+
+            .wave-card {
+                width: 330px;
+                row-gap: 15px;
+                background: url(../../assets/wave_card_bg.svg) 50% 0 / contain no-repeat;
+
+                &__avatar {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                &__quote {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        @media (max-width: $media_min) {
+            &__left-btn {
+                left: 10px;
+            }
+
+            &__right-btn {
+                right: 10px;
+            }
+        }
+    }
+}
