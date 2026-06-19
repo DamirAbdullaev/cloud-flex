@@ -97,9 +97,12 @@
         @include d-flex(end, center, nowrap, row, 10px);
 
         &-img {
-            @include position(absolute, 1, -1, top, left, -75px, -35px);
-            width: 126px;
-            height: 198px;
+            @include position(absolute, 1, -1, top, left, -35px, -5px);
+            width: 120px;
+            height: 190px;
+
+            width: 70px;
+            height: 110px;
         }
 
         &-content {
@@ -150,7 +153,8 @@
             }
 
             &-img {
-                top: -45px;
+                top: 20px;
+                left: -20px;
             }
 
             &-btn {
@@ -187,6 +191,16 @@
                 height: 75px;
                 background-color: $color_wight;
             }
+
+            @media (max-width: $media_sm) {
+                font-size: 14px;
+
+                &::after {
+                    height: 50px;
+                    top: 80px;
+                    left: 6px;
+                }
+            }
         }
 
         @media (max-width: $media_lg) {
@@ -194,7 +208,7 @@
         }
 
         @media (max-width: $media_sm) {
-            bottom: 200px;
+            bottom: 220px;
         }
     }
 
