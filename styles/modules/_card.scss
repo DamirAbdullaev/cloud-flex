@@ -110,7 +110,7 @@
 .wave-card {
     width: 500px;
     height: 275px;
-    background: url(../../assets/wave_card_bg.svg) center/cover no-repeat;
+    background: url(../assets/wave_card_bg.svg) center/cover no-repeat;
 
     @include d-flex(start, start, nowrap, column, 0, 35px);
 

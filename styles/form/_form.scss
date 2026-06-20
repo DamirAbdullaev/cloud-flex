@@ -23,7 +23,7 @@
     .cloud--left {
         width: 700px;
         height: 250px;
-        background: url(../../assets/img/left-cloud.png) center/contain no-repeat;
+        background: url(../assets/img/left-cloud.png) center/contain no-repeat;
 
         @include position(absolute, 1, -1, top, left, 0, -300px);
     }
@@ -31,7 +31,7 @@
     .cloud--right {
         width: 1120px;
         height: 400px;
-        background: url(../../assets/img/right-cloud.png) center/contain no-repeat;
+        background: url(../assets/img/right-cloud.png) center/contain no-repeat;
 
         @include position(absolute, 1, -1, bottom, right, 0, -400px);
     }
@@ -49,7 +49,7 @@
         .cloud--right {
             width: 388px;
             height: 203px;
-            background: url(../../assets/img/right-cloud.png) center/contain no-repeat;
+            background: url(../assets/img/right-cloud.png) center/contain no-repeat;
 
             @include position(absolute, 1, -1, bottom, right, 0, -110px);
         }
@@ -57,7 +57,7 @@
         .cloud--left {
             width: 440px;
             height: 158px;
-            background: url(../../assets/img/left-cloud.png) center/contain no-repeat;
+            background: url(../assets/img/left-cloud.png) center/contain no-repeat;
 
             @include position(absolute, 1, -1, top, left, 0, -110px);
         }

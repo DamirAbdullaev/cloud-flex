@@ -12,7 +12,7 @@
             width: 100%;
             height: 400px;
             padding: 0 0 0 15px;
-            background: url("../../assets/webp/desktop.webp") 100% 100% / contain no-repeat;
+            background: url("../assets/webp/desktop.webp") 100% 100% / contain no-repeat;
 
             &-title {
                 @include f-style(45px, 400, $color_wight);
@@ -27,11 +27,11 @@
             @media (max-width: $media_xl) {
                 background:
                     linear-gradient(180deg, rgba(103, 143, 242, 1) 0%, rgba(103, 143, 242, 0) 74%),
-                    url("../../assets/webp/desktop.webp") 100% 45% / 500px no-repeat;
+                    url("../assets/webp/desktop.webp") 100% 45% / 500px no-repeat;
             }
 
             @media (max-width: $media_md) {
-                background: url("../../assets/webp/desktop.webp") 99% 100% / 450px no-repeat;
+                background: url("../assets/webp/desktop.webp") 99% 100% / 450px no-repeat;
 
                 &-title {
                     font-size: 35px;
@@ -44,7 +44,7 @@
             }
 
             @media (max-width: $media_sm) {
-                background: url("../../assets/webp/desktop.webp") 150px 100% / 400px no-repeat;
+                background: url("../assets/webp/desktop.webp") 150px 100% / 400px no-repeat;
 
                 &-desc {
                     max-width: 320px;
@@ -67,7 +67,7 @@
                 height: 100%;
                 rotate: z 15deg;
 
-                background: url(../../assets/webp/phone.webp) 0 0 / contain no-repeat;
+                background: url(../assets/webp/phone.webp) 0 0 / contain no-repeat;
                 @include position(absolute, -1, -1, top, left, 0, -380px);
             }
 
@@ -114,7 +114,7 @@
                 &::before {
                     top: 0;
                     left: -280px;
-                    background: url(../../assets/webp/phone.webp) 0 0 / 90% no-repeat;
+                    background: url(../assets/webp/phone.webp) 0 0 / 90% no-repeat;
                     rotate: z 65deg;
                 }
             }
@@ -123,7 +123,7 @@
                 &::before {
                     top: 20px;
                     left: -200px;
-                    background: url(../../assets/webp/phone.webp) -170px 0 / 125% no-repeat;
+                    background: url(../assets/webp/phone.webp) -170px 0 / 125% no-repeat;
                 }
             }
 
@@ -142,7 +142,7 @@
             height: 800px;
             padding: 0 0 0 15px;
 
-            background: url(../../assets/webp/cactus.webp) 100% 100% / contain no-repeat;
+            background: url(../assets/webp/cactus.webp) 100% 100% / contain no-repeat;
 
             &-title {
                 @include f-style(45px, 400, $color_wight);
@@ -164,7 +164,7 @@
                     max-width: 500px;
                 }
 
-                background: url(../../assets/webp/cactus.webp) 99% 100% / 380px no-repeat;
+                background: url(../assets/webp/cactus.webp) 99% 100% / 380px no-repeat;
             }
 
             @media (max-width: $media_md) {
@@ -180,14 +180,14 @@
                     font-size: 16px;
                 }
 
-                background: url(../../assets/webp/cactus.webp) 99% 100% / 320px no-repeat;
+                background: url(../assets/webp/cactus.webp) 99% 100% / 320px no-repeat;
             }
 
             @media (max-width: $media_sm) {
                 height: 550px;
                 margin: 0;
 
-                background: url(../../assets/webp/cactus.webp) 100% 100% / 220px no-repeat;
+                background: url(../assets/webp/cactus.webp) 100% 100% / 220px no-repeat;
             }
         }
     }
